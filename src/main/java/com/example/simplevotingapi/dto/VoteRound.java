@@ -3,7 +3,9 @@ package com.example.simplevotingapi.dto;
 import io.github.linpeilie.annotations.Immutable;
 import java.time.ZonedDateTime;
 import java.util.HashSet;
+import lombok.Builder;
 
+@Builder
 @Immutable
 public record VoteRound(
     Long id,
