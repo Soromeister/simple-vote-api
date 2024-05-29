@@ -7,10 +7,8 @@ import lombok.Builder;
 
 @Builder
 @Immutable
-public record Candidate(
-    User user,
-    Long numberOfVotes,
-    Vote vote
-) {
+public record Candidate(User user,
+                        Long numberOfVotes,
+                        Vote vote) {
 
 }

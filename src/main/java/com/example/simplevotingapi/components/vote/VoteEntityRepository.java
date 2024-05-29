@@ -1,5 +1,6 @@
 package com.example.simplevotingapi.components.vote;
 
+import com.example.simplevotingapi.components.vote.VoteEntity.VoteEntityId;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

@@ -8,11 +8,9 @@ import lombok.Builder;
 
 @Builder
 @Immutable
-public record Vote(
-    User user,
-    Candidate candidate,
-    VoteRound votingRound,
-    ZonedDateTime votedDateTime
-) {
+public record Vote(User user,
+                   Candidate candidate,
+                   VoteRound votingRound,
+                   ZonedDateTime votedDateTime) {
 
 }

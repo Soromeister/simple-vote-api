@@ -21,8 +21,9 @@ public class CandidateService {
 
     public Candidate getCandidateById(Long id) {
         return entityToCandidateMapper.convert(entityRepository.findById(id)
-                                                                                 .orElseThrow());
+                                                               .orElseThrow());
     }
+
     public Candidate addCandidate(Candidate candidate) {
         return entityToCandidateMapper.convert(entityRepository.save(candidateToEntityMapper.convert(candidate)));
     }
