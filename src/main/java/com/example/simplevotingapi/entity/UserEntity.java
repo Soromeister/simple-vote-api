@@ -9,7 +9,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.io.Serializable;
-import java.util.HashSet;
+import java.util.Set;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -60,9 +60,10 @@ public class UserEntity extends BaseEntity implements Serializable {
     @Column(name = "role")
     private String role;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "userId")
     private CandidateEntity candidate;
 
     @OneToMany(mappedBy = "id.user")
-    private HashSet<VoteEntity> votes;
+    private Set<VoteEntity> votes;
+
 }

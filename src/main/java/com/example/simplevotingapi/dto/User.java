@@ -1,16 +1,13 @@
 package com.example.simplevotingapi.dto;
 
 import io.github.linpeilie.annotations.Immutable;
-import java.time.ZonedDateTime;
-import java.util.HashSet;
+import java.util.Set;
 import lombok.Builder;
 
 @Builder
 @Immutable
 public record User(
     Long id,
-    ZonedDateTime createdDate,
-    ZonedDateTime updatedDate,
     String password,
     String username,
     String lastName,
@@ -23,7 +20,7 @@ public record User(
     String linkPhoto,
     String role,
     Candidate candidate,
-    HashSet<Vote> votes
+    Set<Vote> votes
 ) {
 
 }

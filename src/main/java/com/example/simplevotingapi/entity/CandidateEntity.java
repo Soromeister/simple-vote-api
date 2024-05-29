@@ -2,6 +2,7 @@ package com.example.simplevotingapi.entity;
 
 import com.example.simplevotingapi.dto.Candidate;
 import io.github.linpeilie.annotations.AutoMapper;
+import io.github.linpeilie.annotations.AutoMapping;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -28,15 +29,21 @@ import org.hibernate.annotations.CreationTimestamp;
 @AutoMapper(target = Candidate.class, cycleAvoiding = true)
 public class CandidateEntity implements Serializable {
 
-    @Id
     @MapsId
     @OneToOne
+    @AutoMapping(source = "userId", target = "user")
     @JoinColumn(name = "user_id", nullable = false, unique = true)
-    private UserEntity user;
+    private UserEntity userId;
+
+    @Id
+    private Long id;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
     public ZonedDateTime createdDate;
+
+    @Column(name = "counter")
+    private Long numberOfVotes;
 
     @OneToOne(mappedBy = "id.candidate")
     private VoteEntity vote;

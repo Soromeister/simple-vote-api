@@ -10,7 +10,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
-import java.util.HashSet;
+import java.util.Set;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -36,5 +36,5 @@ public class VoteRoundEntity extends BaseEntity implements Serializable {
     private ZonedDateTime end;
 
     @OneToMany(mappedBy = "id.votingRound")
-    private HashSet<VoteEntity> votes;
+    private Set<VoteEntity> votes;
 }
