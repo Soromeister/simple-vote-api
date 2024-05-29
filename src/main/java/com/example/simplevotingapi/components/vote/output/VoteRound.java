@@ -1,4 +1,4 @@
-package com.example.simplevotingapi.dto;
+package com.example.simplevotingapi.components.vote.output;
 
 import io.github.linpeilie.annotations.Immutable;
 import java.time.ZonedDateTime;

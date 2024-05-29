@@ -1,6 +1,8 @@
-package com.example.simplevotingapi.entity;
+package com.example.simplevotingapi.components.candidate;
 
-import com.example.simplevotingapi.dto.Candidate;
+import com.example.simplevotingapi.components.candidate.output.Candidate;
+import com.example.simplevotingapi.components.user.UserEntity;
+import com.example.simplevotingapi.components.vote.VoteEntity;
 import io.github.linpeilie.annotations.AutoMapper;
 import io.github.linpeilie.annotations.AutoMapping;
 import jakarta.persistence.Column;

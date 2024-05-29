@@ -1,6 +1,5 @@
-package com.example.simplevotingapi.controller;
+package com.example.simplevotingapi.components.vote;
 
-import com.example.simplevotingapi.service.VoteRoundService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

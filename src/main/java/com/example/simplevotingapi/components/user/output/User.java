@@ -1,5 +1,7 @@
-package com.example.simplevotingapi.dto;
+package com.example.simplevotingapi.components.user.output;
 
+import com.example.simplevotingapi.components.candidate.output.Candidate;
+import com.example.simplevotingapi.components.vote.output.Vote;
 import io.github.linpeilie.annotations.Immutable;
 import java.util.Set;
 import lombok.Builder;

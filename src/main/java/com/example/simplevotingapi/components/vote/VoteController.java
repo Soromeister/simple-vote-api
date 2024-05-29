@@ -1,6 +1,5 @@
-package com.example.simplevotingapi.controller;
+package com.example.simplevotingapi.components.vote;
 
-import com.example.simplevotingapi.service.CandidateService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,7 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/v1")
 @RequiredArgsConstructor
-public class CandidateController {
+public class VoteController {
 
-    private final CandidateService candidateService;
+    private final VoteService voteService;
+
 }

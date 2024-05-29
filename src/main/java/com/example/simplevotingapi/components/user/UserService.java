@@ -1,9 +1,7 @@
-package com.example.simplevotingapi.service;
+package com.example.simplevotingapi.components.user;
 
-import com.example.simplevotingapi.dto.User;
-import com.example.simplevotingapi.dto.UserToUserEntityMapper;
-import com.example.simplevotingapi.entity.UserEntityToUserMapper;
-import com.example.simplevotingapi.repository.UserEntityRepository;
+import com.example.simplevotingapi.components.user.output.User;
+import com.example.simplevotingapi.components.user.output.UserToUserEntityMapper;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

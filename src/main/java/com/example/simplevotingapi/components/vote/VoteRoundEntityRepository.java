@@ -1,6 +1,5 @@
-package com.example.simplevotingapi.repository;
+package com.example.simplevotingapi.components.vote;
 
-import com.example.simplevotingapi.entity.VoteRoundEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface VoteRoundEntityRepository extends JpaRepository<VoteRoundEntity, Long> {

@@ -1,7 +1,6 @@
-package com.example.simplevotingapi.controller;
+package com.example.simplevotingapi.components.user;
 
-import com.example.simplevotingapi.dto.User;
-import com.example.simplevotingapi.service.UserService;
+import com.example.simplevotingapi.components.user.output.User;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

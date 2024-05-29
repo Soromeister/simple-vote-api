@@ -1,5 +1,7 @@
-package com.example.simplevotingapi.entity;
+package com.example.simplevotingapi.components.vote;
 
+import com.example.simplevotingapi.components.candidate.CandidateEntity;
+import com.example.simplevotingapi.components.user.UserEntity;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;

@@ -1,6 +1,6 @@
-package com.example.simplevotingapi.entity;
+package com.example.simplevotingapi.components.vote;
 
-import com.example.simplevotingapi.dto.Vote;
+import com.example.simplevotingapi.components.vote.output.Vote;
 import io.github.linpeilie.annotations.AutoMapper;
 import io.github.linpeilie.annotations.AutoMapping;
 import io.github.linpeilie.annotations.AutoMappings;

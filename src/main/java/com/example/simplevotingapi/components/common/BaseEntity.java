@@ -1,4 +1,4 @@
-package com.example.simplevotingapi.common;
+package com.example.simplevotingapi.components.common;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.Column;

@@ -1,6 +1,5 @@
-package com.example.simplevotingapi.repository;
+package com.example.simplevotingapi.components.candidate;
 
-import com.example.simplevotingapi.entity.CandidateEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
