@@ -6,8 +6,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 import lombok.Getter;
@@ -21,9 +19,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 public abstract class BaseEntity implements Serializable {
 
     @Id
-    @Min(100)
     @Column(name = "id")
-    @Max(Integer.MAX_VALUE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
