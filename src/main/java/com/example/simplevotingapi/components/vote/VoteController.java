@@ -1,5 +1,6 @@
 package com.example.simplevotingapi.components.vote;
 
+import com.example.simplevotingapi.components.vote.input.VoteInput;
 import com.example.simplevotingapi.components.vote.output.Vote;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +26,7 @@ public class VoteController {
     }
 
     @PostMapping(value = "/vote", produces = "application/json")
-    public ResponseEntity<Vote> addVote(Vote vote) {
+    public ResponseEntity<Vote> addVote(VoteInput vote) {
         return new ResponseEntity<>(voteService.addVote(vote),
                                     HttpStatus.OK);
     }

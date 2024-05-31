@@ -1,7 +1,9 @@
 package com.example.simplevotingapi.components.vote;
 
+import com.example.simplevotingapi.components.candidate.CandidateEntityRepository;
+import com.example.simplevotingapi.components.user.UserEntityRepository;
+import com.example.simplevotingapi.components.vote.input.VoteInput;
 import com.example.simplevotingapi.components.vote.output.Vote;
-import com.example.simplevotingapi.components.vote.output.VoteToVoteEntityMapper;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,9 +13,11 @@ import org.springframework.stereotype.Service;
 public class VoteService {
 
     private final VoteEntityRepository entityRepository;
+    private final UserEntityRepository userEntityRepository;
+    private final CandidateEntityRepository candidateEntityRepository;
+    private final VoteRoundEntityRepository voteRoundEntityRepository;
 
     private final VoteEntityToVoteMapper entityToVoteMapper;
-    private final VoteToVoteEntityMapper voteToEntityMapper;
 
     public List<Vote> getAllVotes() {
         return entityToVoteMapper.convert(entityRepository.findAll());
@@ -28,7 +32,16 @@ public class VoteService {
                                                           .orElseThrow());
     }
 
-    public Vote addVote(Vote vote) {
-        return entityToVoteMapper.convert(entityRepository.save(voteToEntityMapper.convert(vote)));
+    public Vote addVote(VoteInput vote) {
+        return entityToVoteMapper.convert(entityRepository.save(VoteEntity.builder()
+                                                                          .id(VoteEntity.VoteEntityId.builder()
+                                                                                                     .user(userEntityRepository.findById(vote.userId())
+                                                                                                                               .orElseThrow())
+                                                                                                     .candidate(candidateEntityRepository.findById(vote.candidateId())
+                                                                                                                                         .orElseThrow())
+                                                                                                     .votingRound(voteRoundEntityRepository.findById(vote.votingRoundId())
+                                                                                                                                           .orElseThrow())
+                                                                                                     .build())
+                                                                          .build()));
     }
 }
